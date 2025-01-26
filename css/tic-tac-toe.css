@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "JetBrains Mono SemiBold", monospace;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#status,
+#reset {
+    margin-top: 20px;
+    font-family: "JetBrains Mono SemiBold", monospace;
+}
+
+#status {
+    font-size: 24px;
+}
+
+#reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "JetBrains Mono SemiBold", monospace;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cell::after {
+    content: attr(data-preview);
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cell:hover::after {
+    opacity: 1;
+}
+
+.cell.winning-cell {
+    background-color: #90ee90; /* Light green */
+    font-weight: bold;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Cell borders for grid layout */
+.cell {
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: 1px solid black;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: 1px solid black;
+}
+
+/* Player styles */
+.cell.player-X {
+    color: #ff0000;
+}
+
+.cell.player-O {
+    color: #0000ff;
+}
