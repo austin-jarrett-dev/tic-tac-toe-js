@@ -1,0 +1,47 @@
+# IntelliJ IDEA-specific files
+.idea/
+*.iml
+*.iws
+out/
+.gradle/
+build/
+
+# Node.js dependencies (if you're using Node)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment and secret files (if any)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Coverage reports (if using a testing framework like Jest)
+coverage/
+
+# Compiled files (if you're using a build system)
+dist/
+*.min.*
+
+# VS Code files (if you're using both IDEs)
+.vscode/
+
+# IDE metadata and caches
+.idea/
+*.iml
+*.ipr
